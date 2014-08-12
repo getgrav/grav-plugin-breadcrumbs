@@ -17,7 +17,7 @@ class BreadcrumbsPlugin extends Plugin
     /**
      * Set needed variables to display breadcrumbs.
      */
-    public function onAfterSiteTwigVars()
+    public function onAfterTwigSiteVars()
     {
         require_once __DIR__ . '/classes/breadcrumbs.php';
 
