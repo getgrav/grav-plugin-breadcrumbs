@@ -11,6 +11,8 @@ You should now have all the plugin files under
 
 	/your/site/grav/user/plugins/breadcrumbs
 
+>> NOTE: This plugin is a modular component for Grav which requires [Grav](http://github.com/getgrav/grav), the [Error](https://github.com/getgrav/grav-plugin-error) and [Problems](https://github.com/getgrav/grav-plugin-problems) plugins, and a theme to be installed in order to operate.
+
 # Usage
 
 The `breadcrumbs` plugin doesn't require any configuration. The moment you install it, it is ready to use.
