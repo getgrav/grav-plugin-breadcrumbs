@@ -5,7 +5,7 @@ It is particularly useful if you are using Grav to run a blog.
 
 # Installation
 
-To install this plugin, just download the zip version of this repository and unzip it under `/your/site/grav/user/plugins` and rename the folder to `breadcrumbs`.
+To install this plugin, just download the zip version of this repository and unzip it under `/your/site/grav/user/plugins`. Then, rename the folder to `breadcrumbs`.
 
 You should now have all the plugin files under
 
