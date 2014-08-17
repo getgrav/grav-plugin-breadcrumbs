@@ -21,11 +21,10 @@ class BreadcrumbsPlugin extends Plugin
     {
         require_once __DIR__ . '/classes/breadcrumbs.php';
 
-        $twig = Registry::get('Twig');
-        $twig->twig_vars['breadcrumbs'] = new Breadcrumbs();
+        Registry::get('Twig')->twig_vars['breadcrumbs'] = new Breadcrumbs();
 
         if ($this->config->get('plugins.breadcrumbs.built_in_css')) {
-            $twig->twig_vars['stylesheets'][] = 'user/plugins/breadcrumbs/breadcrumbs.css';
+            Registry::get('Assets')->add('@plugin/breadcrumbs/css:breadcrumbs.css');
         }
     }
 }
