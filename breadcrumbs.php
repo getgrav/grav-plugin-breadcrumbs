@@ -2,16 +2,25 @@
 namespace Grav\Plugin;
 
 use \Grav\Common\Plugin;
-use \Grav\Common\Registry;
 
 class BreadcrumbsPlugin extends Plugin
 {
+    /**
+     * @return array
+     */
+    public static function getSubscribedEvents() {
+        return [
+            'onAfterTwigTemplatesPaths' => ['onAfterTwigTemplatesPaths', 0],
+            'onAfterTwigSiteVars' => ['onAfterTwigSiteVars', 0]
+        ];
+    }
+
     /**
      * Add current directory to twig lookup paths.
      */
     public function onAfterTwigTemplatesPaths()
     {
-        Registry::get('Twig')->twig_paths[] = __DIR__ . '/templates';
+        $this->grav['twig']->twig_paths[] = __DIR__ . '/templates';
     }
 
     /**
@@ -21,10 +30,10 @@ class BreadcrumbsPlugin extends Plugin
     {
         require_once __DIR__ . '/classes/breadcrumbs.php';
 
-        Registry::get('Twig')->twig_vars['breadcrumbs'] = new Breadcrumbs();
+        $this->grav['twig']->twig_vars['breadcrumbs'] = new Breadcrumbs();
 
         if ($this->config->get('plugins.breadcrumbs.built_in_css')) {
-            Registry::get('Assets')->add('@plugin/breadcrumbs/css:breadcrumbs.css');
+            $this->grav['assets']->add('@plugin/breadcrumbs/css:breadcrumbs.css');
         }
     }
 }
