@@ -10,15 +10,15 @@ class BreadcrumbsPlugin extends Plugin
      */
     public static function getSubscribedEvents() {
         return [
-            'onAfterTwigTemplatesPaths' => ['onAfterTwigTemplatesPaths', 0],
-            'onAfterTwigSiteVars' => ['onAfterTwigSiteVars', 0]
+            'onTwigTemplatePaths' => ['onTwigTemplatePaths', 0],
+            'onTwigSiteVariables' => ['onTwigSiteVariables', 0]
         ];
     }
 
     /**
      * Add current directory to twig lookup paths.
      */
-    public function onAfterTwigTemplatesPaths()
+    public function onTwigTemplatePaths()
     {
         $this->grav['twig']->twig_paths[] = __DIR__ . '/templates';
     }
@@ -26,7 +26,7 @@ class BreadcrumbsPlugin extends Plugin
     /**
      * Set needed variables to display breadcrumbs.
      */
-    public function onAfterTwigSiteVars()
+    public function onTwigSiteVariables()
     {
         require_once __DIR__ . '/classes/breadcrumbs.php';
 

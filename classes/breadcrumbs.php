@@ -3,9 +3,12 @@ namespace Grav\Plugin;
 
 use \Grav\Common\Registry;
 use \Grav\Common\Grav;
+use Grav\Common\GravTrait;
 
 class Breadcrumbs
 {
+    use GravTrait;
+
     /**
      * @var array
      */
@@ -31,11 +34,8 @@ class Breadcrumbs
      */
     protected function build()
     {
-        /** @var Grav $grav */
-        $grav = Registry::get('Grav');
         $hierarchy = array();
-
-        $current = $grav->page;
+        $current = self::$grav['page'];
 
         while ($current && !$current->root()) {
             $hierarchy[$current->url()] = $current;
@@ -48,7 +48,7 @@ class Breadcrumbs
             return;
         }
 
-        $home = $grav->pages->dispatch('/');
+        $home = self::$grav['pages']->dispatch('/');
         if ($home && !array_key_exists($home->url(), $hierarchy)) {
             $hierarchy[] = $home;
         }
