@@ -1,8 +1,7 @@
 <?php
 namespace Grav\Plugin;
 
-use \Grav\Common\Registry;
-use \Grav\Common\Grav;
+use Grav\Common\Grav;
 use Grav\Common\GravTrait;
 
 class Breadcrumbs
