@@ -37,3 +37,14 @@ form:
         0: Disabled
       validate:
         type: bool
+
+    show_all:
+      type: toggle
+      label: Show even with one item
+      highlight: 1
+      default: 1
+      options:
+        1: Enabled
+        0: Disabled
+      validate:
+        type: bool
