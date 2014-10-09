@@ -20,7 +20,7 @@ form:
       type: toggle
       label: Plugin status
       highlight: 1
-      default: 0
+      default: 1
       options:
         1: Enabled
         0: Disabled
