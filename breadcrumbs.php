@@ -10,9 +10,20 @@ class BreadcrumbsPlugin extends Plugin
      */
     public static function getSubscribedEvents() {
         return [
+            'onPluginsInitialized' => ['onPluginsInitialized', 0],
             'onTwigTemplatePaths' => ['onTwigTemplatePaths', 0],
             'onTwigSiteVariables' => ['onTwigSiteVariables', 0]
         ];
+    }
+
+    /**
+     * Initialize configuration
+     */
+    public function onPluginsInitialized()
+    {
+        if ($this->isAdmin()) {
+            $this->active = false;
+        }
     }
 
     /**
@@ -20,6 +31,8 @@ class BreadcrumbsPlugin extends Plugin
      */
     public function onTwigTemplatePaths()
     {
+        if (!$this->active) return;
+
         $this->grav['twig']->twig_paths[] = __DIR__ . '/templates';
     }
 
@@ -28,6 +41,8 @@ class BreadcrumbsPlugin extends Plugin
      */
     public function onTwigSiteVariables()
     {
+        if (!$this->active) return;
+
         require_once __DIR__ . '/classes/breadcrumbs.php';
 
         $this->grav['twig']->twig_vars['breadcrumbs'] = new Breadcrumbs();
