@@ -1,5 +1,7 @@
 # Grav Breadcrumbs Plugin
 
+![Breadcrumbs](assets/readme_1.png)
+
 `Breadcrumbs` is a [Grav](http://github.com/getgrav/grav) plugin that adds links to the previous pages (following the hierarchical structure).
 It is particularly useful if you are using Grav to run a blog.
 
@@ -8,8 +10,6 @@ It is particularly useful if you are using Grav to run a blog.
 Installing the Breadcrumbs plugin can be done in one of two ways. Our GPM (Grav Package Manager) installation method enables you to quickly and easily install the plugin with a simple terminal command, while the manual method enables you to do so via a zip file. 
 
 ## GPM Installation (Preferred)
-
-![GPM Installation](assets/readme_1.png)
 
 The simplest way to install this plugin is via the [Grav Package Manager (GPM)](http://learn.getgrav.org/advanced/grav-gpm) through your system's Terminal (also called the command line).  From the root of your Grav install type:
 
