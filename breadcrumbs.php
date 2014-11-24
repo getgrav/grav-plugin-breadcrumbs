@@ -8,7 +8,8 @@ class BreadcrumbsPlugin extends Plugin
     /**
      * @return array
      */
-    public static function getSubscribedEvents() {
+    public static function getSubscribedEvents()
+    {
         return [
             'onPluginsInitialized' => ['onPluginsInitialized', 0],
             'onTwigTemplatePaths' => ['onTwigTemplatePaths', 0],
@@ -31,7 +32,9 @@ class BreadcrumbsPlugin extends Plugin
      */
     public function onTwigTemplatePaths()
     {
-        if (!$this->active) return;
+        if (!$this->active) {
+            return;
+        }
 
         $this->grav['twig']->twig_paths[] = __DIR__ . '/templates';
     }
@@ -41,7 +44,9 @@ class BreadcrumbsPlugin extends Plugin
      */
     public function onTwigSiteVariables()
     {
-        if (!$this->active) return;
+        if (!$this->active) {
+            return;
+        }
 
         require_once __DIR__ . '/classes/breadcrumbs.php';
 
