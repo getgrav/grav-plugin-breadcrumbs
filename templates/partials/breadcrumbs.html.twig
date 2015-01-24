@@ -1,9 +1,9 @@
 {% set crumbs = breadcrumbs.get() %}
 
 {% if crumbs|length > 1 or config.plugins.breadcrumbs.show_all %}
-<div id="breadcrumbs">
+<div id="breadcrumbs" itemscope itemtype="http://data-vocabulary.org/Breadcrumb">
     {% for crumb in crumbs %}
-    <a href="{{ crumb.url }}">{{ crumb.menu }}</a><i class="fa fa-angle-right"></i>
+    <a href="{{ crumb.url }}" itemprop="url"><span itemprop="title">{{ crumb.menu }}</span></a><i class="fa fa-angle-right"></i>
     {% endfor %}
 </div>
 {% endif %}
