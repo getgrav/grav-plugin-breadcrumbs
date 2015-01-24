@@ -1,3 +1,9 @@
+# v1.2.2
+## 01/23/2015
+
+2. [](#improved)
+    * Added microdata information
+
 # v1.2.1
 ## 01/09/2015
 
