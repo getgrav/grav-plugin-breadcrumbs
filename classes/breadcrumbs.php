@@ -34,7 +34,7 @@ class Breadcrumbs
     protected function build()
     {
         $hierarchy = array();
-        $current = self::$grav['page'];
+        $current = self::getGrav()['page'];
 
         while ($current && !$current->root()) {
             $hierarchy[$current->url()] = $current;
@@ -47,7 +47,7 @@ class Breadcrumbs
             return;
         }
 
-        $home = self::$grav['pages']->dispatch('/');
+        $home = self::getGrav()['pages']->dispatch('/');
         if ($home && !array_key_exists($home->url(), $hierarchy)) {
             $hierarchy[] = $home;
         }
