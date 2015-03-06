@@ -63,3 +63,20 @@ Manually updating Breadcrumbs is pretty simple. Here is what you will need to do
 * Clear the Grav cache. The simplest way to do this is by going to the root Grav directory in terminal and typing `bin/grav clear-cache`.
 
 > Note: Any changes you have made to any of the files listed under this directory will also be removed and replaced by the new set. Any files located elsewhere (for example a YAML settings file placed in `user/config/plugins`) will remain intact.
+
+## Configuration
+
+Simply copy the `user/plugins/breadcrumbs/breadcrumbs.yaml` into `user/config/plugins/breadcrumbs.yaml` and make your modifications.
+
+```
+enabled: true
+show_all: true
+built_in_css: true
+include_home: true
+icon_home: ''
+icon_divider_classes: 'fa fa-angle-right'
+link_trailing: false
+```
+
+Options are pretty self explanatory.
+

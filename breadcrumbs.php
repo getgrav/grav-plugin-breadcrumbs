@@ -46,7 +46,7 @@ class BreadcrumbsPlugin extends Plugin
     {
         require_once __DIR__ . '/classes/breadcrumbs.php';
 
-        $this->grav['twig']->twig_vars['breadcrumbs'] = new Breadcrumbs();
+        $this->grav['twig']->twig_vars['breadcrumbs'] = new Breadcrumbs($this->config->get('plugins.breadcrumbs'));
 
         if ($this->config->get('plugins.breadcrumbs.built_in_css')) {
             $this->grav['assets']->add('plugin://breadcrumbs/css/breadcrumbs.css');
