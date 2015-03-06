@@ -1,3 +1,12 @@
+# v1.3.0
+## 03/06/2015
+
+1. [](#new)
+    * Added toggle for showing home item
+    * Added configurable home icon
+    * Added configurable divider icon
+    * Added toggle to link trailing item
+
 # v1.2.3
 ## 02/05/2015
 

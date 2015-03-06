@@ -12,6 +12,15 @@ class Breadcrumbs
      * @var array
      */
     protected $breadcrumbs;
+    protected $config;
+
+    /**
+     * @param $config
+     */
+    public function __construct($config)
+    {
+        $this->config = $config;
+    }
 
     /**
      * Get all items in breadcrumbs.
@@ -47,10 +56,13 @@ class Breadcrumbs
             return;
         }
 
-        $home = self::getGrav()['pages']->dispatch('/');
-        if ($home && !array_key_exists($home->url(), $hierarchy)) {
-            $hierarchy[] = $home;
+        if ($this->config['include_home']) {
+            $home = self::getGrav()['pages']->dispatch('/');
+            if ($home && !array_key_exists($home->url(), $hierarchy)) {
+                $hierarchy[] = $home;
+            }
         }
+
 
         $this->breadcrumbs = array_reverse($hierarchy);
     }
