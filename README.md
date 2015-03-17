@@ -33,10 +33,10 @@ The `breadcrumbs` plugin doesn't require any configuration. The moment you insta
 
 Something you might want to do is to override the look and feel of the breadcrumbs, and with Grav it is super easy.
 
-Copy the template file [breadcrumbs.html.twig](templates/breadcrumbs.html.twig) into the `templates` folder of your custom theme, and that is it. 
+Copy the template file [breadcrumbs.html.twig](templates/partials/breadcrumbs.html.twig) into the `templates` folder of your custom theme, and that is it. 
 
 ```
-/your/site/grav/user/themes/custom-theme/templates/breadcrumbs.html.twig
+/your/site/grav/user/themes/custom-theme/templates/partials/breadcrumbs.html.twig
 ```
 
 You can now edit the override and tweak it however you prefer.
