@@ -43,7 +43,18 @@ class Breadcrumbs
     protected function build()
     {
         $hierarchy = array();
-        $current = self::getGrav()['page'];
+        $grav = self::getGrav();        
+        $current = $grav['page'];    
+
+       
+        // Adding Params to Breadcrumbs
+        if ($grav['uri']->params())     {
+            foreach ($grav['uri']->params(null,true) as $key => $value)  {               
+                $hierarchy[] = array('menu'=>$value,
+                                     'url'=>$current->url(). '/' . $key . $grav['config']->get('system.param_sep') . rawurlencode($value)
+                                );
+            }            
+        }
 
         while ($current && !$current->root()) {
             $hierarchy[$current->url()] = $current;
