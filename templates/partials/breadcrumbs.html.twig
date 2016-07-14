@@ -9,7 +9,11 @@
     {% endif %}
     {% for crumb in crumbs %}
         {% if not loop.last %}
-            <a href="{{ crumb.url }}" itemprop="url"><span itemprop="title">{{ crumb.menu }}</span></a>
+            {% if crumb.routable %}
+                <a href="{{ crumb.url }}" itemprop="url"><span itemprop="title">{{ crumb.menu }}</span></a>
+            {% else  %}
+                <span itemprop="title">{{ crumb.menu }}</span>
+            {% endif %}
             <i class="{{ divider }}"></i>
         {% else %}
             {% if breadcrumbs_config.link_trailing %}
