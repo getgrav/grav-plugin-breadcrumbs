@@ -1,3 +1,9 @@
+# v1.5.1
+## xx/xx/2016
+
+1. [](#improved)
+    * Removed Grav trait in favor of `Grav::instance()`
+
 # v1.5.0
 ## 07/14/2016
 
