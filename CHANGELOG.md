@@ -2,6 +2,7 @@
 ## xx/xx/2016
 
 1. [](#improved)
+    * Add option to ignore current page [#11]
     * Removed Grav trait in favor of `Grav::instance()`
 
 # v1.5.0
