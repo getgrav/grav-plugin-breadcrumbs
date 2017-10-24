@@ -59,6 +59,17 @@ form:
       validate:
         type: bool
 
+    include_current:
+      type: toggle
+      label: Include Current Page
+      highlight: 1
+      default: 1
+      options:
+        1: Enabled
+        0: Disabled
+      validate:
+        type: bool
+
     icon_home:
       type: text
       size: medium
