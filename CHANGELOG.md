@@ -1,5 +1,5 @@
 # v1.5.1
-## xx/xx/2016
+## 10/24/2017
 
 1. [](#improved)
     * Add option to ignore current page [#11]
