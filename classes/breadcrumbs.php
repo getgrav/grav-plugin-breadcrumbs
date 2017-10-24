@@ -2,11 +2,9 @@
 namespace Grav\Plugin;
 
 use Grav\Common\Grav;
-use Grav\Common\GravTrait;
 
 class Breadcrumbs
 {
-    use GravTrait;
 
     /**
      * @var array
@@ -43,12 +41,8 @@ class Breadcrumbs
     protected function build()
     {
         $hierarchy = array();
-        $current = self::getGrav()['page'];
-
-        while ($current && !$current->root()) {
-            $hierarchy[$current->url()] = $current;
-            $current = $current->parent();
-        }
+        $grav = Grav::instance();
+        $current = $grav['page'];
 
         // Page cannot be routed.
         if (!$current) {
@@ -56,13 +50,26 @@ class Breadcrumbs
             return;
         }
 
+        if (!$current->root()) {
+
+            if ($this->config['include_current']) {
+                $hierarchy[$current->url()] = $current;
+            }
+
+            $current = $current->parent();
+
+            while ($current && !$current->root()) {
+                $hierarchy[$current->url()] = $current;
+                $current = $current->parent();
+            }
+        }
+
         if ($this->config['include_home']) {
-            $home = self::getGrav()['pages']->dispatch('/');
+            $home = $grav['pages']->dispatch('/');
             if ($home && !array_key_exists($home->url(), $hierarchy)) {
                 $hierarchy[] = $home;
             }
         }
-
 
         $this->breadcrumbs = array_reverse($hierarchy);
     }
