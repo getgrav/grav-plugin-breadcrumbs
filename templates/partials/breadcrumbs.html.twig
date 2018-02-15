@@ -1,4 +1,4 @@
-{% set crumbs = breadcrumbs.get() %}
+{% set crumbs = breadcrumbs.get(page) %}
 {% set breadcrumbs_config = config.plugins.breadcrumbs %}
 {% set divider = breadcrumbs_config.icon_divider_classes %}
 
