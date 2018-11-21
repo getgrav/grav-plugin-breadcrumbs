@@ -1,0 +1,10 @@
+en:
+  PLUGIN_BREADCRUMBS:
+    SHOW_WITH_ONE_ITEM: 'Show even with one item'
+    BUILTIN_CSS: 'Use built in CSS'
+    BUILTIN_CSS_HELP: 'Include the CSS provided by the plugin'
+    INCLUDE_HOME: 'Include Home'
+    INCLUDE_CURRENT_PAGE: 'Include Current Page'
+    ICON_HOME: 'Icon home'
+    ICON_DIVIDER_CLASSES: 'Icon Divider Classes'
+    LINK_TRAILING: 'Link Trailing'
