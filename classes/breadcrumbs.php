@@ -73,6 +73,27 @@ class Breadcrumbs
 
             // As long as $current does not contain the root page...
             while ($current && !$current->root()) {
+                // Get the frontmatter of the page.
+                $header = $current->header();
+
+                // Assume we may descend unless otherwise told.
+                $may_descend = true;
+
+                // If the frontmatter contains a value for $may_descend...
+                if(isset(
+                    $header->breadcrumbs,
+                    $header->breadcrumbs['may_descend']
+                )) {
+                    // Get that value.
+                    $may_descend = $header->breadcrumbs['may_descend'];
+                }
+
+                // Then, if breadcrumbs should stop at this page...
+                if ($may_descend === false) {
+                    // Empty the $hierarchy.
+                    $hierarchy = [];
+                }
+
                 // Place the current page in the hierarchy.
                 $hierarchy[$current->url()] = $current;
 
