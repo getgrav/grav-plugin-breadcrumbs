@@ -5,20 +5,15 @@ en:
     BUILTIN_CSS_HELP: 'Include the CSS provided by the plugin'
     INCLUDE_HOME: 'Include Home'
     INCLUDE_CURRENT_PAGE: 'Include Current Page'
+    ITEM_LIMIT_TYPE: 'Item limit type'
+    NONE: 'None'
+    TO_WORDS: 'To words'
+    TO_CHARS: 'To chars'
+    ITEM_LIMIT_LENGTH: 'Item limit length'
+    WORDS_OR_CHARACTERS: 'words / characters'
     ICON_HOME: 'Icon home'
     ICON_DIVIDER_CLASSES: 'Icon Divider Classes'
     LINK_TRAILING: 'Link Trailing'
-
-uk:
-  PLUGIN_BREADCRUMBS:
-    SHOW_WITH_ONE_ITEM: 'Показувати навіть з одним елементом'
-    BUILTIN_CSS: 'Використовувати вбудований CSS'
-    BUILTIN_CSS_HELP: 'Включити CSS, що надається плагіном'
-    INCLUDE_HOME: 'Включити головну сторінку'
-    INCLUDE_CURRENT_PAGE: 'Включати активну сторінку'
-    ICON_HOME: 'Іконка головної сторінки'
-    ICON_DIVIDER_CLASSES: 'Клас іконки розділювача'
-    LINK_TRAILING: 'Трейлінг посилання'
 
 ru:
   PLUGIN_BREADCRUMBS:
@@ -27,6 +22,29 @@ ru:
     BUILTIN_CSS_HELP: 'Включить CSS, предоставляемый плагином'
     INCLUDE_HOME: 'Включить главную страницу'
     INCLUDE_CURRENT_PAGE: 'Включать текущую страницу'
+    ITEM_LIMIT_TYPE: 'Тип ограничения элемента'
+    NONE: 'Не ограничивать'
+    TO_WORDS: 'Словами'
+    TO_CHARS: 'Символами'
+    ITEM_LIMIT_LENGTH: 'Динна ограничения элемента'
+    WORDS_OR_CHARACTERS: 'слов / символов'
     ICON_HOME: 'Иконка главной страницы'
     ICON_DIVIDER_CLASSES: 'Класс иконки разделителя'
     LINK_TRAILING: 'Трейлинг ссылки'
+
+uk:
+  PLUGIN_BREADCRUMBS:
+    SHOW_WITH_ONE_ITEM: 'Показувати навіть з одним елементом'
+    BUILTIN_CSS: 'Використовувати вбудований CSS'
+    BUILTIN_CSS_HELP: 'Включити CSS, що надається плагіном'
+    INCLUDE_HOME: 'Включити головну сторінку'
+    INCLUDE_CURRENT_PAGE: 'Включати активну сторінку'
+    ITEM_LIMIT_TYPE: 'Тип обмеження елемента'
+    NONE: 'Не обмежувати'
+    TO_WORDS: 'До слів'
+    TO_CHARS: 'До символів'
+    ITEM_LIMIT_LENGTH: 'Довжина обмеження елемента'
+    WORDS_OR_CHARACTERS: 'слова / символи'
+    ICON_HOME: 'Іконка головної сторінки'
+    ICON_DIVIDER_CLASSES: 'Клас іконки розділювача'
+    LINK_TRAILING: 'Трейлінг посилання'
