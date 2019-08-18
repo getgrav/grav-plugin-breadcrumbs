@@ -86,7 +86,7 @@ form:
     item_limit_length:
       type: text
       size: x-small
-      append: PLUGIN_BREADCRUMBS.WORDS_OR_CHARACTERS
+      append: PLUGIN_BREADCRUMBS.WORDS_OR_CHARS
       label: PLUGIN_BREADCRUMBS.ITEM_LIMIT_LENGTH
       validate:
         type: number
