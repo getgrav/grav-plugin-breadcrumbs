@@ -70,6 +70,27 @@ form:
         0: PLUGIN_ADMIN.DISABLED
       validate:
         type: bool
+        
+    item_limit_type:
+      type: select
+      size: medium
+      label: PLUGIN_BREADCRUMBS.ITEM_LIMIT_TYPE
+      default: none
+      options:
+        none: PLUGIN_BREADCRUMBS.NONE
+        to_words: PLUGIN_BREADCRUMBS.TO_WORDS
+        to_chars: PLUGIN_BREADCRUMBS.TO_CHARS
+      validate:
+        type: string
+
+    item_limit_length:
+      type: text
+      size: x-small
+      append: PLUGIN_BREADCRUMBS.WORDS_OR_CHARACTERS
+      label: PLUGIN_BREADCRUMBS.ITEM_LIMIT_LENGTH
+      validate:
+        type: number
+        min: 1
 
     icon_home:
       type: text
