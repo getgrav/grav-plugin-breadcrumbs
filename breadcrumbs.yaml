@@ -6,3 +6,5 @@ include_current: true
 icon_home: ''
 icon_divider_classes: 'fa fa-angle-right'
 link_trailing: false
+item_limit_type: none
+item_limit_length: 1
