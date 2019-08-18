@@ -2,26 +2,32 @@
 {% set breadcrumbs_config = config.plugins.breadcrumbs %}
 {% set divider = breadcrumbs_config.icon_divider_classes %}
 
+{% set crop_options = {
+    type : breadcrumbs_config.item_limit_type,
+    length : breadcrumbs_config.item_limit_length,
+    ending : '…'
+} %}
+
+{% import 'macros/crop.html.twig' as _crop %}
+
 {% if crumbs|length > 1 or breadcrumbs_config.show_all %}
-<div id="breadcrumbs" itemscope itemtype="http://data-vocabulary.org/Breadcrumb">
-    {% if breadcrumbs_config.icon_home %}
-    <i class="{{ breadcrumbs_config.icon_home }}"></i>
-    {% endif %}
-    {% for crumb in crumbs %}
-        {% if not loop.last %}
-            {% if crumb.routable %}
-                <a href="{{ crumb.url }}" itemprop="url"><span itemprop="title">{{ crumb.menu }}</span></a>
-            {% else  %}
-                <span itemprop="title">{{ crumb.menu }}</span>
-            {% endif %}
-            <i class="{{ divider }}"></i>
-        {% else %}
-            {% if breadcrumbs_config.link_trailing %}
-                <a href="{{ crumb.url }}" itemprop="url"><span itemprop="title">{{ crumb.menu }}</span></a>
-            {% else %}
-                <span itemprop="title">{{ crumb.menu }}</span>
-            {% endif %}
+    <div id="breadcrumbs" itemscope itemtype="http://data-vocabulary.org/Breadcrumb">
+        {% if breadcrumbs_config.icon_home %}
+            <i class="{{ breadcrumbs_config.icon_home }}"></i>
         {% endif %}
-    {% endfor %}
-</div>
+
+        {% for crumb in crumbs %}
+            {% set crumb_item = _crop.stringToCroppedSpan(crumb.menu, crop_options) %}
+
+            {% if (not loop.last and crumb.routable) or breadcrumbs_config.link_trailing %}
+                {% set crumb_item = '<a href="%s" itemprop="url">%s</a>'|format(crumb.url, crumb_item) %}
+            {% endif %}
+
+            {{ crumb_item|raw }}
+
+            {% if not loop.last %}
+                <i class="{{ divider }}"></i>
+            {% endif %}
+        {% endfor %}
+    </div>
 {% endif %}
