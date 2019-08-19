@@ -1,0 +1,32 @@
+{% macro stringToCroppedSpan(string, options) %}
+    {% set with_title = false %}
+    {% set content = string %}
+
+    {% switch options.type %}
+    {% case 'to_words' %}
+        {% set words = string|split(' ') %}
+        {% if words|length > options.length %}
+            {% set with_title = true %}
+            {% set content = '' %}
+            {% for word in words|slice(0, options.length) %}
+                {% if not loop.last %}
+                    {% set content = content ~ word ~ ' ' %}
+                {% else %}
+                    {% set content = content ~ word ~ options.ending %}
+                {% endif %}
+            {% endfor %}
+        {% endif %}
+
+    {% case 'to_chars' %}
+        {% if string|length > options.length %}
+            {% set with_title = true %}
+            {% set content = string|slice(0, options.length)|trim(' ') ~ options.ending %}
+        {% endif %}
+    {% endswitch %}
+
+    {% if with_title %}
+        <span itemprop="title" title="{{ string }}">{{ content }}</span>
+    {% else %}
+        <span itemprop="title">{{ string }}</span>
+    {% endif %}
+{% endmacro %}
