@@ -10,7 +10,7 @@ en:
     TO_WORDS: 'To words'
     TO_CHARS: 'To chars'
     ITEM_LIMIT_LENGTH: 'Item limit length'
-    WORDS_OR_CHARS: 'words / characters'
+    WORDS_OR_CHARS: 'words / chars'
     ICON_HOME: 'Icon home'
     ICON_DIVIDER_CLASSES: 'Icon Divider Classes'
     LINK_TRAILING: 'Link Trailing'
