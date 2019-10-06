@@ -9,6 +9,17 @@ en:
     ICON_DIVIDER_CLASSES: 'Icon Divider Classes'
     LINK_TRAILING: 'Link Trailing'
 
+de:
+  PLUGIN_BREADCRUMBS:
+    SHOW_WITH_ONE_ITEM: 'Auch bei nur einem Eintrag anzeigen'
+    BUILTIN_CSS: 'Builtin CSS verwenden'
+    BUILTIN_CSS_HELP: 'Das vom Plugin bereitgestellte CSS einbinden'
+    INCLUDE_HOME: 'Home anzeigen'
+    INCLUDE_CURRENT_PAGE: 'Aktuelle Seite anzeigen'
+    ICON_HOME: 'Symbol für home'
+    ICON_DIVIDER_CLASSES: 'Symbolklassen für Trenner'
+    LINK_TRAILING: 'Link Trailing'
+
 uk:
   PLUGIN_BREADCRUMBS:
     SHOW_WITH_ONE_ITEM: 'Показувати навіть з одним елементом'
