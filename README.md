@@ -99,3 +99,23 @@ link_trailing: false
 
 Options are pretty self explanatory.
 
+# Troubleshooting
+
+## The breadcrumb is not displayed (using the Quark theme)
+
+Adapt user/themes/quark/templates/default.html.twigm add the following code:
+```
+    {% if config.plugins.breadcrumbs.enabled %}
+    {% include 'partials/breadcrumbs.html.twig' %}
+    {% endif %}
+```
+between the lines 
+```
+{% block content %}
+```
+and 
+```
+    {{ page.content|raw }}
+```
+
+
