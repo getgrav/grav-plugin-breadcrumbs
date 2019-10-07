@@ -103,7 +103,7 @@ Options are pretty self explanatory.
 
 ## The breadcrumb is not displayed (using the Quark theme)
 
-Adapt user/themes/quark/templates/default.html.twigm add the following code:
+Adapt user/themes/quark/templates/default.html.twig add the following code:
 ```
     {% if config.plugins.breadcrumbs.enabled %}
     {% include 'partials/breadcrumbs.html.twig' %}
