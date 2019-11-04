@@ -2,6 +2,7 @@
     height: 3rem;
     line-height: 3rem;
     padding-left: 3rem;
+    flex-wrap: wrap;
 }
 #breadcrumbs span {
     display: inline-block;
