@@ -23,6 +23,7 @@
                     <span itemprop="name">{{ crumb.menu }}</span>
                 {% endif %}
             {% endif %}
+            <meta itemprop="item" content="{{ crumb.url }}" />
             <meta itemprop="position" content="{{ loop.index }}" />
         </span>
     {% endfor %}
