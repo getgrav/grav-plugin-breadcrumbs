@@ -1,15 +1,17 @@
 <?php
-namespace Grav\Plugin;
+namespace Grav\Plugin\Breadcrumbs;
 
 use Grav\Common\Grav;
 
 class Breadcrumbs
 {
-
     /**
      * @var array
      */
     protected $breadcrumbs;
+    /**
+     * @var array
+     */
     protected $config;
 
     /**
