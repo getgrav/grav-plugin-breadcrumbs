@@ -40,6 +40,8 @@ class BreadcrumbsPlugin extends Plugin
             return;
         }
 
+        class_alias(Breadcrumbs::class, 'Grav\\Plugin\\Breadcrumbs');
+
         $this->enable([
             'onTwigTemplatePaths' => ['onTwigTemplatePaths', 0],
             'onTwigSiteVariables' => ['onTwigSiteVariables', 0]
