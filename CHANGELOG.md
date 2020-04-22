@@ -1,5 +1,5 @@
 # v1.6.0
-## mm/dd/2020
+## 04/22/2020
 
 1. [](#new)
     * Added `schema.org/BreadcrumbList` [#29]
