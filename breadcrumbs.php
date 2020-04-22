@@ -1,7 +1,9 @@
 <?php
 namespace Grav\Plugin;
 
-use \Grav\Common\Plugin;
+use Composer\Autoload\ClassLoader;
+use Grav\Common\Plugin;
+use Grav\Plugin\Breadcrumbs\Breadcrumbs;
 
 class BreadcrumbsPlugin extends Plugin
 {
@@ -11,8 +13,21 @@ class BreadcrumbsPlugin extends Plugin
     public static function getSubscribedEvents()
     {
         return [
-            'onPluginsInitialized' => ['onPluginsInitialized', 0]
+            'onPluginsInitialized' => [
+                ['autoload', 100001],
+                ['onPluginsInitialized', 0]
+            ]
         ];
+    }
+
+    /**
+     * [onPluginsInitialized:100000] Composer autoload.
+     *
+     * @return ClassLoader
+     */
+    public function autoload()
+    {
+        return require __DIR__ . '/vendor/autoload.php';
     }
 
     /**
@@ -24,6 +39,8 @@ class BreadcrumbsPlugin extends Plugin
             $this->active = false;
             return;
         }
+
+        class_alias(Breadcrumbs::class, 'Grav\\Plugin\\Breadcrumbs');
 
         $this->enable([
             'onTwigTemplatePaths' => ['onTwigTemplatePaths', 0],
@@ -44,8 +61,6 @@ class BreadcrumbsPlugin extends Plugin
      */
     public function onTwigSiteVariables()
     {
-        require_once __DIR__ . '/classes/breadcrumbs.php';
-
         $this->grav['twig']->twig_vars['breadcrumbs'] = new Breadcrumbs($this->config->get('plugins.breadcrumbs'));
 
         if ($this->config->get('plugins.breadcrumbs.built_in_css')) {

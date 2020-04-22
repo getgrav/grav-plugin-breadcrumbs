@@ -41,6 +41,24 @@ Copy the template file [breadcrumbs.html.twig](templates/partials/breadcrumbs.ht
 
 You can now edit the override and tweak it however you prefer.
 
+## Per-page Settings
+
+The following options are available for use in a page's YAML frontmatter, placed within the `breadcrumbs` mapping:
+
+| Option      | Default | Values            | Description                                                                          |
+|-------------|---------|-------------------|--------------------------------------------------------------------------------------|
+| `max_depth` | `true`  | `true` or `false` | Determines whether breadcrumbs for pages beneath the current page will be generated. |
+
+### Example Per-page Settings
+
+```yaml
+---
+title: Some page you wrote
+breadcrumbs:
+  may_descend: false # Breadcrumbs will not be generated for pages underneath this one.
+---
+```
+
 # Updating
 
 As development for the Breadcrumbs plugin continues, new versions may become available that add additional features and functionality, improve compatibility with newer Grav releases, and generally provide a better user experience. Updating Breadcrumbs is easy, and can be done through Grav's GPM system, as well as manually.
