@@ -1,7 +1,10 @@
-# v1.5.2
-## mm/dd/2020
+# v1.6.0
+## 04/22/2020
 
 1. [](#new)
+    * Added `schema.org/BreadcrumbList` [#29]
+    * Added per-page option to control breadcrumbs [#20]
+    * Added various translations [#17][#18][#19]
     * Pass phpstan level 1 tests
     * Require Grav v1.6
 
