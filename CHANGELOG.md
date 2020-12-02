@@ -1,5 +1,5 @@
 # v1.6.1
-## mm/dd/2020
+## 12/02/2020
 
 1. [](#improved)
     * Minor default template improvements
