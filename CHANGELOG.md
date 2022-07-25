@@ -1,5 +1,5 @@
 # v1.6.2
-## mm/dd/2022
+## 07/25/2022
 
 1. [](#improved)
    * RTL Fixes [#37](https://github.com/getgrav/grav-plugin-breadcrumbs/pull/37)
