@@ -30,3 +30,13 @@ ru:
     ICON_HOME: 'Иконка главной страницы'
     ICON_DIVIDER_CLASSES: 'Класс иконки разделителя'
     LINK_TRAILING: 'Трейлинг ссылки'
+es:
+  PLUGIN_BREADCRUMBS:
+    SHOW_WITH_ONE_ITEM: 'Mostrar incluso con un ítem'
+    BUILTIN_CSS: 'Utilizar CSS integrado'
+    BUILTIN_CSS_HELP: 'Incluir los estilos CSS proporcionados por el plugin'
+    INCLUDE_HOME: 'Incluir página de Inicio'
+    INCLUDE_CURRENT_PAGE: 'Incluir la página actual'
+    ICON_HOME: 'Icono de página del Inicio'
+    ICON_DIVIDER_CLASSES: 'Clases para iconos separadores'
+    LINK_TRAILING: 'Enlace Final'
