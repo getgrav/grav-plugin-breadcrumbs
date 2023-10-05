@@ -37,6 +37,6 @@ es:
     BUILTIN_CSS_HELP: 'Incluir los estilos CSS proporcionados por el plugin'
     INCLUDE_HOME: 'Incluir página de Inicio'
     INCLUDE_CURRENT_PAGE: 'Incluir la página actual'
-    ICON_HOME: 'Icono de página del Inicio'
+    ICON_HOME: 'Icono de página de Inicio'
     ICON_DIVIDER_CLASSES: 'Clases para iconos separadores'
     LINK_TRAILING: 'Enlace Final'
